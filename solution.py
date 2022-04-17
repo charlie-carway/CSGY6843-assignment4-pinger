@@ -118,7 +118,7 @@ def ping(host, timeout=1):
     #Send ping requests to a server separated by approximately one second
     #Add something here to collect the delays of each ping in a list so you can calculate vars after your ping
   
-    ttl=[]                                       ## added line
+    ttl=[]                                       ## added line - initialize empty array for append delay
 
     for i in range(0,4): #Four pings will be sent (loop runs for i=0, 1, 2, 3)
         delay = doOnePing(dest, timeout)
@@ -144,4 +144,6 @@ def ping(host, timeout=1):
     return vars
 
 if __name__ == '__main__':
+    ## ping("127.0.0.1")
+    ## ping("No.no.e")
     ping("google.co.il")
