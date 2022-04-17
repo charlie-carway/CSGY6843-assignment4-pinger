@@ -120,7 +120,7 @@ def ping(host, timeout=1):
     #Add something here to collect the delays of each ping in a list so you can calculate vars after your ping
   
     ttl=[]                                       ## added line - initialize empty array for append delay
-    vars=[]                                       ## added line - initialize empty array
+    ## vars=[]                                       ## added line - initialize empty array
 
     for i in range(0,4): #Four pings will be sent (loop runs for i=0, 1, 2, 3)
         delay = doOnePing(dest, timeout)
@@ -139,11 +139,17 @@ def ping(host, timeout=1):
     print("('" + str(round(packet_min,2)) + "','" + str(round(packet_max,2)) + "','" + str(round(packet_avg,2)) + "','" + str(round(stdev_var,2)) + "')")
                                                   ## added END
 
+    print("assigning vars values")
     
     vars = [str(round(packet_min, 8)), str(round(packet_avg, 8)), str(round(packet_max, 8)), str(round(stdev(stdev_var), 8))]
     ## vars = [int(round(packet_min, 8)), int(round(packet_avg, 8)), int(round(packet_max, 8)), int(round(stdev(stdev_var), 8))]                ## added line
+    print("assigned vars values")
+
+    print("returning vars values")
 
     return vars
+
+    print("returned vars values")
 
 if __name__ == '__main__':
     ## ping("127.0.0.1")
