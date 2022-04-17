@@ -6,6 +6,7 @@ import time
 import select
 import binascii
 # Should use stdev
+import statistics                      ## added line
 from statistics import stdev               ## added line
 
 ICMP_ECHO_REQUEST = 8
