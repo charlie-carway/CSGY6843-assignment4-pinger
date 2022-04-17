@@ -141,8 +141,8 @@ def ping(host, timeout=1):
 
     print("assigning vars values")
     
-    vars = [str(round(packet_min, 4)), str(round(packet_avg, 4)), str(round(packet_max, 4)), str(round(stdev(stdev_var), 4))]
-    ## vars = [int(round(packet_min, 8)), int(round(packet_avg, 8)), int(round(packet_max, 8)), int(round(stdev(stdev_var), 8))]                ## added line
+    vars = [str(round(packet_min, 4)), str(round(packet_avg, 4)), str(round(packet_max, 4)), str(round(stdev_var), 4))]
+    ## vars = [int(round(packet_min, 8)), int(round(packet_avg, 8)), int(round(packet_max, 8)), int(round(stdev_var), 8))]                ## added line
     print("assigned vars values")
 
     print("returning vars values")
